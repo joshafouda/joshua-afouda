@@ -4,37 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books - Josué (Joshua) AFOUDA</title>
-    <!-- Custom CSS Link -->
-    <link rel="stylesheet" href="/style.css">
     <style>
+        /* Styles globaux */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header-sec {
+            background-color: #333;
+            padding: 20px 40px;
+        }
+
+        .header-sec nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header-sec nav ul li {
+            margin: 0 15px;
+        }
+
+        .header-sec nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .header-sec nav ul li a.active {
+            color: #ff0077;
+        }
+
+        .header-sec nav ul li a:hover {
+            color: #ff0077;
+        }
+
+        /* Section Books */
         .book-section {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 80px auto;
             padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .book-post {
             display: flex;
             flex-wrap: wrap;
+            align-items: flex-start;
             margin-bottom: 40px;
-            align-items: center;
         }
 
         .book-post img {
-            width: 48%;
+            flex: 1 1 40%;
+            max-width: 400px;
             height: auto;
-            margin-left: 4%;
             border-radius: 8px;
+            margin: 0 20px 0 0;
         }
 
         .book-post .book-text {
-            width: 48%;
+            flex: 1 1 55%;
             text-align: left;
         }
 
         .book-post .book-text h3 {
             font-size: 24px;
             font-weight: bold;
+            color: #ff0077;
             margin-bottom: 10px;
         }
 
@@ -53,39 +102,60 @@
 
         .book-post .book-text a:hover {
             text-decoration: underline;
+            color: #0056b3;
         }
 
+        /* Footer */
         footer {
+            background-color: #333;
+            color: white;
             text-align: center;
-            margin-top: 40px;
             padding: 20px 0;
-            background-color: #f8f9fa;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .book-post {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .book-post img {
+                margin: 0 0 20px 0;
+            }
+
+            .book-post .book-text {
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header class="header-sec">
         <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fa fa-bars"></i>
-            </label>
-            <label class="logo">Data App<span> Developer</span></label>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
-                <li><a href="/Childs/blog.html">Blog</a></li>
-                <li><a class="active" href="/Childs/book.html">Book</a></li>
-                <li><a href="/Childs/contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a class="active" href="book.html">Book</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Section Books -->
     <section id="books" class="book-section">
         <div class="container">
             <!-- Book 1 -->
             <div class="book-post">
+                <img src="../Image/cover_3d_livre_stats_python.png" alt="Ebook Statistique et Simulation">
                 <div class="book-text">
                     <h3>Ebook Statistique et Simulation avec Python : Cours et Exercices corrigés</h3>
                     <p>Dans ce livre 100% pratique, vous trouverez :</p>
@@ -97,54 +167,42 @@
                     <p>- Machine Learning, etc.</p>
                     <p><a href="https://buy.stripe.com/eVaaIGgfQefgbcIfZ3" target="_blank">Cliquez ici pour acheter et télécharger le livre</a></p>
                 </div>
-                <img src="/Image/cover_3d_livre_stats_python.png" alt="Ebook Statistique et Simulation">
             </div>
 
             <!-- Book 2 -->
             <div class="book-post">
+                <img src="../Image/1640525017.png" alt="Ebook Apprendre à programmer avec R et RStudio">
                 <div class="book-text">
                     <h3>Ebook APPRENDRE A PROGRAMMER AVEC R ET RSTUDIO</h3>
-                    <p>
-                        Ce livre est conçu pour guider pas à pas les débutants en programmation avec le langage R. À la 
-                        fin de ce livre, vous maîtriserez les concepts fondamentaux de la programmation informatique.
-                    </p>
-                    <p>
-                        Vous apprendrez également à importer des données, utiliser la bibliothèque Tidyverse et créer des visualisations 
-                        avec GGPLOT2.
-                    </p>
+                    <p>Ce livre est conçu pour guider pas à pas les débutants en programmation avec le langage R. À la fin de ce livre, vous maîtriserez les concepts fondamentaux de la programmation informatique.</p>
+                    <p>Vous apprendrez également à importer des données, utiliser la bibliothèque Tidyverse et créer des visualisations avec GGPLOT2.</p>
                     <p><a href="https://buy.stripe.com/aEU7wu1kW4EG94A6ov" target="_blank">Cliquez ici pour acheter et télécharger le livre</a></p>
                 </div>
-                <img src="/Image/1640525017.png" alt="Ebook Apprendre à programmer avec R et RStudio">
             </div>
 
             <!-- Book 3 -->
             <div class="book-post">
+                <img src="../Image/conseils.png" alt="Analyse des données avec Python et Pandas">
                 <div class="book-text">
                     <h3>Analyse des données avec Python et Pandas pour débutants</h3>
-                    <p>
-                        La maîtrise de Pandas est essentielle pour tout Data Scientist débutant. Ce produit inclut notebooks, 
-                        codes, données et fichiers HTML pour une introduction pratique à l’analyse de données.
-                    </p>
+                    <p>La maîtrise de Pandas est essentielle pour tout Data Scientist débutant. Ce produit inclut notebooks, codes, données et fichiers HTML pour une introduction pratique à l’analyse de données.</p>
                     <p><a href="https://buy.stripe.com/8wMaIGfbM0oqeoU8wC" target="_blank">Cliquez ici pour acheter et télécharger le produit</a></p>
                 </div>
-                <img src="/Image/conseils.png" alt="Analyse des données avec Python et Pandas">
             </div>
 
             <!-- Book 4 -->
             <div class="book-post">
+                <img src="../Image/file-20210416-17-1s42eoj.jpg" alt="Ethique en Data Science">
                 <div class="book-text">
                     <h3>Ethique dans la Data Science et l'Intelligence Artificielle (ebook)</h3>
-                    <p>
-                        Ce livre est destiné aux étudiants et professionnels en Data Management, IA et Big Data. Il contient 
-                        des cas pratiques et exercices sur l'éthique en milieu professionnel.
-                    </p>
+                    <p>Ce livre est destiné aux étudiants et professionnels en Data Management, IA et Big Data. Il contient des cas pratiques et exercices sur l'éthique en milieu professionnel.</p>
                     <p><a href="https://buy.stripe.com/fZe0429Rsdbc3Kg148" target="_blank">Cliquez ici pour acheter et télécharger le livre</a></p>
                 </div>
-                <img src="/Image/file-20210416-17-1s42eoj.jpg" alt="Ethique en Data Science">
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>© 2024 Josué (Joshua) AFOUDA - All Rights Reserved</p>
     </footer>
