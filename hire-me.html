@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Me - Josué (Joshua) AFOUDA</title>
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header-sec">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <label class="logo">Data App<span> Developer</span></label>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hire-me" class="contact-section">
+        <div class="container">
+            <h1>Hire Me</h1>
+            <p>Have a project in mind? Tell me about it below, and let's get started!</p>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                
+                <label for="project-type">Project Type:</label>
+                <select id="project-type" name="project-type" required>
+                    <option value="">Select a project type</option>
+                    <option value="dashboard">Dashboard Development</option>
+                    <option value="automation">Workflow Automation</option>
+                    <option value="analytics">Data Analytics</option>
+                    <option value="prediction">Predictive Modeling</option>
+                    <option value="data-cleaning">Data Cleaning</option>
+                    <option value="machine-learning">Machine Learning Models</option>
+                    <option value="custom-app">Custom Data Applications</option>
+                </select>
+                
+                <label for="timeline">Desired Timeline:</label>
+                <input type="text" id="timeline" name="timeline" placeholder="e.g., 2 weeks" required>
+                
+                <label for="budget">Budget (optional):</label>
+                <input type="text" id="budget" name="budget" placeholder="Your Budget">
+                
+                <label for="message">Project Description:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Describe your project..." required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Josué (Joshua) AFOUDA - All Rights Reserved</p>
+    </footer>
+</body>
+</html>

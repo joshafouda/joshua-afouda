@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Josué (Joshua) AFOUDA</title>
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .blog-post {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+
+        .blog-post img {
+            width: 48%;
+            height: auto;
+            margin-right: 4%;
+            border-radius: 8px;
+        }
+
+        .blog-post .blog-text {
+            width: 48%;
+        }
+
+        .blog-post .blog-text h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .blog-post .blog-text p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .blog-post .blog-text a {
+            font-size: 16px;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .blog-post .blog-text a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-sec">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <label class="logo">Data App<span> Developer</span></label>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a class="active" href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <!-- Article 1 -->
+            <div class="blog-post">
+                <img src="image/img_article_cloud.png" alt="Cloud Article">
+                <div class="blog-text">
+                    <h3>Cloud Computing : Définitions, Avantages et Inconvénients de son utilisation</h3>
+                    <p>
+                        L’une des plus grandes révolutions technologiques de ces dernières décennies est le Cloud. 
+                        Les entreprises adoptent de plus en plus les solutions du Cloud Computing pour proposer des 
+                        services innovants et de meilleure qualité à leurs clients.
+                    </p>
+                    <p><a href="https://medium.com/@afouda.josue/cloud-computing-d%C3%A9finitions-avantages-et-inconv%C3%A9nients-de-son-utilisation-74893ca15372" target="_blank">LIRE TOUT L'ARTICLE...</a></p>
+                </div>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="blog-post">
+                <img src="image/miniature_article_ethics1.png" alt="Ethics Article">
+                <div class="blog-text">
+                    <h3>L’Ethique dans la Data Science et l’Intelligence Artificielle (Partie 1)</h3>
+                    <p>
+                        Découvrez les théories et concepts impliqués dans le domaine de l’éthique en Data Science 
+                        et Intelligence Artificielle. Cet article explore les bases essentielles de ce sujet.
+                    </p>
+                    <p><a href="https://medium.com/@afouda.josue/lethique-dans-la-data-science-et-l-intelligence-artificielle-partie-1-36c243641202" target="_blank">LIRE TOUT L'ARTICLE...</a></p>
+                </div>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="blog-post">
+                <img src="https://miro.medium.com/max/1400/1*xTJtSQEGM4gkapqbeMRhAA.jpeg" alt="Job Tips Article">
+                <div class="blog-text">
+                    <h3>10 CONSEILS PRATIQUES POUR DÉCROCHER UN JOB EN DATA SCIENCE MÊME EN ÉTANT DÉBUTANT</h3>
+                    <p>
+                        Le secteur de la Data Science offre de nombreuses opportunités. Découvrez 10 conseils pratiques 
+                        pour décrocher un emploi, même en étant débutant.
+                    </p>
+                    <p><a href="https://medium.com/@afouda.josue/10-conseils-pratiques-pour-d%C3%A9crocher-un-job-en-data-science-m%C3%AAme-en-%C3%A9tant-d%C3%A9butant-e70e6efdafca" target="_blank">LIRE TOUT L'ARTICLE...</a></p>
+                </div>
+            </div>
+
+            <!-- Article 4 -->
+            <div class="blog-post">
+                <img src="https://miro.medium.com/max/1400/1*e8FOCYrTCfCFRRHc1IeN5g.jpeg" alt="Machine Learning Article">
+                <div class="blog-text">
+                    <h3>03 APPLICATIONS BUSINESS DU MACHINE LEARNING</h3>
+                    <p>
+                        Explorez trois cas d’applications métiers du Machine Learning, qui transforment les entreprises 
+                        en leur apportant un avantage compétitif significatif.
+                    </p>
+                    <p><a href="https://medium.com/@afouda.josue/03-applications-business-du-machine-learning-39405c93dc99" target="_blank">LIRE TOUT L'ARTICLE...</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Josué (Joshua) AFOUDA - All Rights Reserved</p>
+    </footer>
+</body>
+</html>
