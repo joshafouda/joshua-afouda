@@ -4,22 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hire Me - Josué (Joshua) AFOUDA</title>
-    <!-- Custom CSS Link -->
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <header class="header-sec">
         <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fa fa-bars"></i>
-            </label>
-            <label class="logo">Data App<span> Developer</span></label>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="/Childs/contact.html">Contact</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="book.html">Book</a></li>
             </ul>
         </nav>
     </header>
@@ -28,7 +22,7 @@
         <div class="container">
             <h1>Hire Me</h1>
             <p>Have a project in mind? Tell me about it below, and let's get started!</p>
-            <form action="submit_form.php" method="POST">
+            <form action="https://formsubmit.co/afouda.josue@gmail.com" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
                 
@@ -56,6 +50,11 @@
                 <label for="message">Project Description:</label>
                 <textarea id="message" name="message" rows="5" placeholder="Describe your project..." required></textarea>
                 
+                <!-- Hidden inputs for FormSubmit -->
+                <input type="hidden" name="_next" value="https://joshafouda.github.io/joshua-afouda/thank-you.html">
+                <input type="hidden" name="_subject" value="New Hire Me Submission">
+                <input type="hidden" name="_captcha" value="false">
+
                 <button type="submit">Submit</button>
             </form>
         </div>
