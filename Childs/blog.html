@@ -4,36 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Josué (Joshua) AFOUDA</title>
-    <!-- Custom CSS Link -->
-    <link rel="stylesheet" href="../style.css">
     <style>
+        /* Styles globaux */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header-sec {
+            background-color: #333;
+            padding: 20px 40px;
+        }
+
+        .header-sec nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header-sec nav ul li {
+            margin: 0 15px;
+        }
+
+        .header-sec nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .header-sec nav ul li a.active {
+            color: #ff0077;
+        }
+
+        .header-sec nav ul li a:hover {
+            color: #ff0077;
+        }
+
+        /* Blog Section */
         .blog-section {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 80px auto;
             padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .blog-post {
             display: flex;
             flex-wrap: wrap;
+            align-items: flex-start;
             margin-bottom: 40px;
-            align-items: center;
         }
 
         .blog-post img {
-            width: 48%;
+            flex: 1 1 40%;
+            max-width: 400px;
             height: auto;
-            margin-right: 4%;
             border-radius: 8px;
+            margin-right: 20px;
         }
 
         .blog-post .blog-text {
-            width: 48%;
+            flex: 1 1 55%;
         }
 
         .blog-post .blog-text h3 {
             font-size: 24px;
             font-weight: bold;
+            color: #ff0077;
             margin-bottom: 10px;
         }
 
@@ -52,59 +101,73 @@
 
         .blog-post .blog-text a:hover {
             text-decoration: underline;
+            color: #0056b3;
         }
 
+        /* Footer */
         footer {
+            background-color: #333;
+            color: white;
             text-align: center;
-            margin-top: 40px;
             padding: 20px 0;
-            background-color: #f8f9fa;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .blog-post {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .blog-post img {
+                margin: 0 0 20px 0;
+            }
+
+            .blog-post .blog-text {
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header class="header-sec">
         <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fa fa-bars"></i>
-            </label>
-            <label class="logo">Data App<span> Developer</span></label>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
-                <li><a class="active" href="/Childs/blog.html">Blog</a></li>
-                <li><a href="/Childs/contact.html">Contact</a></li>
+                <li><a class="active" href="blog.html">Blog</a></li>
+                <li><a class="active" href="book.html">Book</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Blog Section -->
     <section id="blog" class="blog-section">
         <div class="container">
             <!-- Article 1 -->
             <div class="blog-post">
-                <img src="/Image/img_article_cloud.png" alt="Cloud Article">
+                <img src="../Image/img_article_cloud.png" alt="Cloud Article">
                 <div class="blog-text">
                     <h3>Cloud Computing : Définitions, Avantages et Inconvénients de son utilisation</h3>
-                    <p>
-                        L’une des plus grandes révolutions technologiques de ces dernières décennies est le Cloud. 
-                        Les entreprises adoptent de plus en plus les solutions du Cloud Computing pour proposer des 
-                        services innovants et de meilleure qualité à leurs clients.
-                    </p>
+                    <p>L’une des plus grandes révolutions technologiques de ces dernières décennies est le Cloud. Les entreprises adoptent de plus en plus les solutions du Cloud Computing pour proposer des services innovants et de meilleure qualité à leurs clients.</p>
                     <p><a href="https://medium.com/@afouda.josue/cloud-computing-d%C3%A9finitions-avantages-et-inconv%C3%A9nients-de-son-utilisation-74893ca15372" target="_blank">LIRE TOUT L'ARTICLE...</a></p>
                 </div>
             </div>
 
             <!-- Article 2 -->
             <div class="blog-post">
-                <img src="/Image/miniature_article_ethics1.png" alt="Ethics Article">
+                <img src="../Image/miniature_article_ethics1.png" alt="Ethics Article">
                 <div class="blog-text">
                     <h3>L’Ethique dans la Data Science et l’Intelligence Artificielle (Partie 1)</h3>
-                    <p>
-                        Découvrez les théories et concepts impliqués dans le domaine de l’éthique en Data Science 
-                        et Intelligence Artificielle. Cet article explore les bases essentielles de ce sujet.
-                    </p>
+                    <p>Découvrez les théories et concepts impliqués dans le domaine de l’éthique en Data Science et Intelligence Artificielle. Cet article explore les bases essentielles de ce sujet.</p>
                     <p><a href="https://medium.com/@afouda.josue/lethique-dans-la-data-science-et-l-intelligence-artificielle-partie-1-36c243641202" target="_blank">LIRE TOUT L'ARTICLE...</a></p>
                 </div>
             </div>
@@ -114,10 +177,7 @@
                 <img src="https://miro.medium.com/max/1400/1*xTJtSQEGM4gkapqbeMRhAA.jpeg" alt="Job Tips Article">
                 <div class="blog-text">
                     <h3>10 CONSEILS PRATIQUES POUR DÉCROCHER UN JOB EN DATA SCIENCE MÊME EN ÉTANT DÉBUTANT</h3>
-                    <p>
-                        Le secteur de la Data Science offre de nombreuses opportunités. Découvrez 10 conseils pratiques 
-                        pour décrocher un emploi, même en étant débutant.
-                    </p>
+                    <p>Le secteur de la Data Science offre de nombreuses opportunités. Découvrez 10 conseils pratiques pour décrocher un emploi, même en étant débutant.</p>
                     <p><a href="https://medium.com/@afouda.josue/10-conseils-pratiques-pour-d%C3%A9crocher-un-job-en-data-science-m%C3%AAme-en-%C3%A9tant-d%C3%A9butant-e70e6efdafca" target="_blank">LIRE TOUT L'ARTICLE...</a></p>
                 </div>
             </div>
@@ -127,18 +187,16 @@
                 <img src="https://miro.medium.com/max/1400/1*e8FOCYrTCfCFRRHc1IeN5g.jpeg" alt="Machine Learning Article">
                 <div class="blog-text">
                     <h3>03 APPLICATIONS BUSINESS DU MACHINE LEARNING</h3>
-                    <p>
-                        Explorez trois cas d’applications métiers du Machine Learning, qui transforment les entreprises 
-                        en leur apportant un avantage compétitif significatif.
-                    </p>
+                    <p>Explorez trois cas d’applications métiers du Machine Learning, qui transforment les entreprises en leur apportant un avantage compétitif significatif.</p>
                     <p><a href="https://medium.com/@afouda.josue/03-applications-business-du-machine-learning-39405c93dc99" target="_blank">LIRE TOUT L'ARTICLE...</a></p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p> 2024 Josué (Joshua) AFOUDA - All Rights Reserved</p>
+        <p>© 2024 Josué (Joshua) AFOUDA - All Rights Reserved</p>
     </footer>
 </body>
 </html>
