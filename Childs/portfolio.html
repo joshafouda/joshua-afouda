@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,7 +11,6 @@
             padding: 0;
             background-color: #f4f8fc;
             color: #333;
-            line-height: 1.6;
         }
 
         /* Navbar */
@@ -51,83 +50,126 @@
             color: #ffdd40;
         }
 
-        /* Header section */
+        /* Header */
         .header {
             background: linear-gradient(to right, #ff007f, #ff4081);
             color: #fff;
             padding: 50px 20px;
             text-align: center;
-            position: relative;
         }
 
         .header h1 {
             font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .header p {
-            font-size: 1.2rem;
-            margin-bottom: 0;
-        }
-
-        /* Content sections */
-        .content {
-            padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .section {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-
-        .section:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .section img {
-            flex: 1;
-            max-width: 400px;
-            margin: 0 20px;
-            border-radius: 10px;
-        }
-
-        .section .text {
-            flex: 2;
-        }
-
-        .section h2 {
-            font-size: 1.8rem;
-            color: #ff007f;
-            margin-bottom: 10px;
-        }
-
-        .section p {
-            font-size: 1rem;
             margin: 0;
         }
 
-        /* Footer button */
-        .footer {
-            text-align: center;
-            margin: 40px 0;
+        /* Portfolio Section */
+        .portfolio-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .footer a {
-            display: inline-block;
+        .portfolio-item {
+            position: relative;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .portfolio-item .info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .portfolio-item:hover .info {
+            opacity: 1;
+        }
+
+        .info h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #ffdd40;
+        }
+
+        .info p {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .tags {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
             background: #ff007f;
             color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .buttons a {
             text-decoration: none;
+            background: #ff007f;
+            color: white;
             padding: 10px 20px;
-            font-size: 1rem;
             border-radius: 5px;
             transition: background 0.3s ease;
         }
 
-        .footer a:hover {
-            background: #e60070;
+        .buttons a:hover {
+            background: #ff4081;
+        }
+
+        /* Hire Me Button */
+        .hire-me {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .hire-me a {
+            display: inline-block;
+            background: #ff007f;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .hire-me a:hover {
+            background: #ff4081;
         }
     </style>
 </head>
@@ -146,27 +188,93 @@
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
     </nav>
+
+    <!-- Header -->
     <header class="header">
         <h1>My Portfolio</h1>
+        <p>Hover over a project to learn more!</p>
     </header>
-    <div class="container">
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="../images/portfolio/droplet.jpg" alt="Project 1">
-                <div class="portfolio-desc">
-                    <h3>Decathlon Sales Analysis</h3>
-                    <p>An R Shiny dashboard for sales analysis.</p>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-container">
+        <!-- Project 1 -->
+        <div class="portfolio-item">
+            <img src="../Image/bg1.jpg" alt="Project 1">
+            <div class="info">
+                <h3>Habit Tracker</h3>
+                <p>A simple React habit tracker that uses Firebase database.</p>
+                <div class="tags">
+                    <span class="tag">Firebase</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Sass</span>
+                </div>
+                <div class="buttons">
+                    <a href="https://josueafouda.shinyapps.io/RShiny-Portfolio/" target="_blank">View Live</a>
+                    <a href="https://github.com/joshafouda/DataPracticeHub" target="_blank">GitHub</a>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <img src="../images/portfolio/lamp.jpg" alt="Project 2">
-                <div class="portfolio-desc">
-                    <h3>Energy Consumption Analysis</h3>
-                    <p>Detect anomalies in customer energy use.</p>
-                </div>
-            </div>
-            <!-- Add other portfolio items similarly -->
         </div>
+
+        <!-- Add more projects here -->
+        <!-- Project 2 -->
+        <div class="portfolio-item">
+            <img src="../Image/bg2.jpg" alt="Project 2">
+            <div class="info">
+                <h3>Habit Tracker</h3>
+                <p>A simple React habit tracker that uses Firebase database.</p>
+                <div class="tags">
+                    <span class="tag">Firebase</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Sass</span>
+                </div>
+                <div class="buttons">
+                    <a href="https://josueafouda.shinyapps.io/credit_scoring_bank/" target="_blank">View Live</a>
+                    <a href="https://github.com/joshafouda/windsurf-ml-demo" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="portfolio-item">
+            <img src="../Image/bg3.jpg" alt="Project 3">
+            <div class="info">
+                <h3>Habit Tracker</h3>
+                <p>A simple React habit tracker that uses Firebase database.</p>
+                <div class="tags">
+                    <span class="tag">Firebase</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Sass</span>
+                </div>
+                <div class="buttons">
+                    <a href="https://josueafouda.shinyapps.io/credit_scoring_bank/" target="_blank">View Live</a>
+                    <a href="https://github.com/joshafouda/windsurf-ml-demo" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="portfolio-item">
+            <img src="../Image/bg4.jpg" alt="Project 4">
+            <div class="info">
+                <h3>Habit Tracker</h3>
+                <p>A simple React habit tracker that uses Firebase database.</p>
+                <div class="tags">
+                    <span class="tag">Firebase</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Sass</span>
+                </div>
+                <div class="buttons">
+                    <a href="https://josueafouda.shinyapps.io/credit_scoring_bank/" target="_blank">View Live</a>
+                    <a href="https://github.com/joshafouda/windsurf-ml-demo" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hire Me Section -->
+    <div class="hire-me">
+        <a href="hire-me.html">Like what you see? Hire Joshua</a>
     </div>
+
 </body>
 </html>
