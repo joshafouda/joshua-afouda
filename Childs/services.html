@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8fc;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ff007f;
+            padding: 15px 20px;
+            color: white;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: #ffdd40;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(to right, #ff007f, #ff4081);
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        /* Portfolio Section */
+        .portfolio-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .portfolio-item {
+            position: relative;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .portfolio-item .info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .portfolio-item:hover .info {
+            opacity: 1;
+        }
+
+        .info h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #ffdd40;
+        }
+
+        .info p {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .tags {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background: #ff007f;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            background: #ff007f;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .buttons a:hover {
+            background: #ff4081;
+        }
+
+        /* Hire Me Button */
+        .hire-me {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .hire-me a {
+            display: inline-block;
+            background: #ff007f;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .hire-me a:hover {
+            background: #ff4081;
+        }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <h1>Our Services</h1>
+        <p>Each service is carefully tailored to meet your specific needs and drive impactful results.</p>
+    </header>
+
+    <section class="services-container">
+        <!-- Web Design Service -->
+        <div class="service-item">
+            <img src="../Image/bg1.jpg" alt="Web Design" class="service-image">
+            <div class="service-text">
+                <h2>Web Design</h2>
+                <p>Your website is often the first point of contact for potential customers. Our focus is on creating a visually compelling and highly functional online presence that aligns with your brand identity and business goals.</p>
+                <p><strong>Types of websites:</strong></p>
+                <ul>
+                    <li>Landing Pages</li>
+                    <li>Enquiry/Service-based</li>
+                    <li>Subscription</li>
+                    <li>E-commerce</li>
+                </ul>
+                <a href="hire-me.html" class="btn">Hire Me</a>
+            </div>
+        </div>
+
+        <!-- Data Visualization Service -->
+        <div class="service-item">
+            <img src="../Image/bg2.jpg" alt="Data Visualization" class="service-image">
+            <div class="service-text">
+                <h2>Data Visualization</h2>
+                <p>Transform raw data into actionable insights with interactive dashboards and reports. We design user-friendly visualizations that empower businesses to make data-driven decisions with confidence.</p>
+                <p><strong>Our Expertise:</strong></p>
+                <ul>
+                    <li>Business Intelligence Dashboards</li>
+                    <li>Custom Analytics Solutions</li>
+                    <li>Reporting Automation</li>
+                </ul>
+                <a href="hire-me.html" class="btn">Hire Me</a>
+            </div>
+        </div>
+
+        <!-- App Development Service -->
+        <div class="service-item">
+            <img src="../Image/bg3.jpg" alt="App Development" class="service-image">
+            <div class="service-text">
+                <h2>App Development</h2>
+                <p>From idea to deployment, we develop custom applications tailored to your business needs. Whether it’s a web app, mobile app, or an internal tool, we ensure seamless functionality and an intuitive user experience.</p>
+                <p><strong>Specialties:</strong></p>
+                <ul>
+                    <li>Custom R Shiny Dashboards</li>
+                    <li>Mobile-friendly Web Apps</li>
+                    <li>Scalable Architecture</li>
+                </ul>
+                <a href="hire-me.html" class="btn">Hire Me</a>
+            </div>
+        </div>
+
+        <!-- Consulting Service -->
+        <div class="service-item">
+            <img src="../Image/bg4.jpg" alt="Consulting" class="service-image">
+            <div class="service-text">
+                <h2>Consulting</h2>
+                <p>Optimize your workflows and solve complex challenges with expert consulting services. We bring strategic thinking and technical expertise to help you achieve your goals.</p>
+                <p><strong>Focus Areas:</strong></p>
+                <ul>
+                    <li>Data Strategy</li>
+                    <li>System Integration</li>
+                    <li>Performance Optimization</li>
+                </ul>
+                <a href="hire-me.html" class="btn">Hire Me</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
